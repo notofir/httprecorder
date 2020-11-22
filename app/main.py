@@ -13,7 +13,7 @@ def reset():
 def home():
     result = "<html><body><table>"
     with open("data.txt", "a") as file:
-        file.write("<tr><td>" + str(request) + "</td><td>" + str(request.headers) + "</td><td>" + str(request.values) + "</td><td>" + str(request.form) + "</td><td>" + str(request.args) + "</td></tr>")
+        file.write("<tr><td>" + str(request) + "</td><td>" + str(request.headers) + "</td><td>" + str(request.values) + "</td><td>" + str(request.form) + "</td><td>" + str(request.json) + "</td><td>" + str(request.args) + "</td></tr>")
 
     with open("data.txt", "r") as file:
         result += file.read()
