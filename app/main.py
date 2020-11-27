@@ -9,7 +9,7 @@ def reset():
     return "Data reset."
 
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def home():
     result = "<html><body><table>"
     with open("data.txt", "a") as file:
